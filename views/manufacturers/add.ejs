@@ -1,0 +1,27 @@
+<%- include('../inc/header') %>
+
+    <div class="container">
+        <div class="row col-12 col-md-6 m-auto mt-5 mb-5 border border-dark-subtle p-5 rounded-5 shadow-lg ">
+
+            <h3 class="d-flex justify-content-center ">Add Manufacturer</h3>
+
+            <form method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                        <input name="name" type="text" class="form-control border border-dark-subtle" placeholder="name manufacturer..." id="">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">logo</label>
+                    <input class="form-control" name="logo" type="file" id="formFile">
+                  </div>
+                
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button type="submit" class="btn btn-outline-success">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<%- include('../inc/footer') %>

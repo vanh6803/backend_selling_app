@@ -1,0 +1,137 @@
+<%- include('../inc/header') %>
+
+    <div class="container col-12 col-md-6 m-auto mt-5 mb-5 border border-dark-subtle p-5 rounded-5 shadow-lg ">
+        <h3 class="d-flex justify-content-center ">Add Information Product</h3>
+        <form method="post" enctype="multipart/form-data" class="row g-3 mt-4">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label class="form-label">Name product</label>
+                        <input type="text" class="form-control" name="name" placeholder="Enter name product">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Price</label>
+                        <input type="number" class="form-control" name="price" placeholder="Price in dollars">
+                    </div>
+                    <div class="col-md-5">
+                        <label for="formFile" class="form-label">Image product</label>
+                        <input class="form-control" type="file" name="image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Screen technology</label>
+                <input type="text" class="form-control" name="screenTechnology" placeholder="Enter screen technology">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Screen size</label>
+                <input type="number" class="form-control" name="screenSize" placeholder="Enter screen size">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Screen features</label>
+                <input type="text" class="form-control" name="screenFeatures" placeholder="Enter screen features">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Screen type</label>
+                <input type="text" class="form-control" name="screenType" placeholder="Enter screen type">
+            </div>
+
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">Rear camera</label>
+                <input type="text" class="form-control" name="rearCamera" placeholder="Enter rear camera">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">Front camera</label>
+                <input type="text" class="form-control" name="frontCamera" placeholder="Enter front camera">
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="inputCity" class="form-label">ChipSet</label>
+                        <input type="text" class="form-control" name="chipSet" placeholder="Enter chipSet">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputCity" class="form-label">Cpu</label>
+                        <input type="text" class="form-control" name="cpu" placeholder="Enter cpu">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputCity" class="form-label">Gpu</label>
+                        <input type="text" class="form-control" name="gpu" placeholder="Enter gpu">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="inputCity" class="form-label">Ram</label>
+                        <input type="text" class="form-control" name="ram" placeholder="Enter ram">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="inputCity" class="form-label">Rom</label>
+                        <input type="text" class="form-control" name="rom" placeholder="Enter rom">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">Battery</label>
+                <input type="number" class="form-control" name="battery" placeholder="Enter battery">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity"  class="form-label">Operating system</label>
+                <select id="inputState" name="operatingSystem" class="form-select">
+                    <option selected>Choose operating system</option>
+                    <option value="0">Android</option>
+                    <option value="1">IOS</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">Internet</label>
+                <input type="text" class="form-control" name="internet" placeholder="List various network connectivity methods">
+            </div>
+            
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">Audio technology</label>
+                <input type="text" class="form-control" name="audioTechnology" placeholder="Enter audio technology">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">Special features</label>
+                <input type="text" class="form-control" name="specialFeatures" placeholder="Enter special features">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">Color</label>
+                <input type="text" class="form-control" name="color" placeholder="List various color codes">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">Weight</label>
+                <input type="number" class="form-control" name="weight" placeholder="Enter weight">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">Quantity</label>
+                <input type="number" class="form-control" name="quantity" placeholder="Enter quantity">
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">Status</label >
+                <select id="inputState" name="status" class="form-select">
+                    <option selected>Choose status</option>
+                    <option value="0">New</option>
+                    <option value="1">old</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">Manufacturer</label>
+                <select id="inputState" name="manufacturer" class="form-select">
+                    <option selected>Choose manufacturer</option>
+                    <% manufacturer.forEach(obj => { %>
+                        <option value="<%= obj._id %>" > <%= obj.name %> </option>
+                   <% }); %>
+                </select>
+            </div>
+            <div class="col-md-12">
+                <label class="form-label">Description</label>
+                <textarea name="description" id="" cols="10" rows="5" class="form-control"></textarea>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button type="submit" class="btn btn-outline-success">Save</button>
+            </div>
+
+        </form>
+    </div>
+
+    <%- include('../inc/footer') %>

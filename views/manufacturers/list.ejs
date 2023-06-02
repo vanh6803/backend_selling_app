@@ -1,0 +1,89 @@
+<%- include('../inc/header') %>
+
+    <div class="container-fluid">
+        <div class="row col-sm-12 col-md-8 m-auto mt-5 mb-5">
+            <table class="table table-bordered border-dark-subtle table-striped bg-light">
+                <thead>
+                    <tr class="text-center">
+                        <th scope="col">Number</th>
+                        <th scope="col">Logo</th>
+                        <th scope="col">Name</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% manufacturer.forEach((obj, index)=> { %>
+                        <tr >
+                            <th scope="row" class="text-center align-middle">
+                                <%= index + 1 %>
+                            </th>
+                            <td class="text-center align-middle">
+                                <img src="<%= obj.logo %>" alt="" width="50">
+                            </td>
+                            <td class="text-center align-middle">
+                                <%= obj.name %>
+                            </td>
+                            <td class="text-center align-middle">
+                                <a href="/manufacturer/edit/<%= obj._id %>"
+                                    class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                                    <i class="bi bi-pen"></i>
+                                </a>
+                            </td>
+                            <td class="text-center align-middle">
+                                <a href="#" data-bs-target="#exampleModal" data-bs-toggle="modal"
+                                    data-bs-whatever="<%= obj._id %>"
+                                    class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- dialog confirm  -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Delete product?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Do you want delete this product?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="btnDelete" type="button" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- delete hidden form -->
+    <form method="post" name="delete-form"></form>
+
+    <script>
+        var recipient;
+        var deleteForm = document.forms['delete-form']
+        const exampleModal = document.getElementById('exampleModal')
+        if (exampleModal) {
+            exampleModal.addEventListener('show.bs.modal', event => {
+                const button = event.relatedTarget
+                recipient = button.getAttribute('data-bs-whatever')
+                const modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+                modalBodyInput.value = recipient
+            })
+        }
+
+        var btnDelete = document.getElementById('btnDelete');
+        btnDelete.onclick = () => {
+            deleteForm.action = '/manufacturer/delete/' + recipient;
+            deleteForm.submit();
+        }
+    </script>
+    <%- include('../inc/footer') %>
