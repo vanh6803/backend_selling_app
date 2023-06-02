@@ -30,7 +30,7 @@ const productSchema = new db.mongoose.Schema(
       audioTechnology: { type: String, required: false },
       specialFeatures: { type: String, required: false },
     },
-    color: { type: Array, required: false },
+    color: { type: String, required: false },
     status: { type: String, required: true },
     quantity: { type: Number, required: true },
     manufacturer: { type: db.mongoose.Schema.ObjectId, ref: "manufacturer" },

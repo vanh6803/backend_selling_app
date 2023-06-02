@@ -10,3 +10,6 @@ a {
 .line{
   border-top: 1px dashed #000;
 }
+.style_image_detail{
+  width: 50%;
+}
