@@ -14,3 +14,20 @@ exports.listProduct = async (req, res, next) => {
     return res.status(500).json({ msg: error.message });
   }
 };
+
+exports.detailProduct = async (req, res, next) => {
+  let id = req.params.id;
+  console.log(id);
+  try {
+    var product = await productModel.product.findById({_id: id}).populate("manufacturer");
+    if (product) {
+      return res
+        .status(200)
+        .json({ data: product, message: "get data successfully" });
+    } else {
+      return res.status(200).json({ message: "not found" });
+    }
+  } catch (error) {
+    return res.status(500).json({ msg: error.message });
+  }
+};

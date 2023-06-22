@@ -1,6 +1,7 @@
 const productModel = require("../models/product.model");
 const manufacturerModel = require("../models/manufacturer.model");
 const fs = require("fs");
+const { log } = require("console");
 
 exports.list = async (req, res, next) => {
   var product = await productModel.product.find();
@@ -56,6 +57,7 @@ exports.add = async (req, res, next) => {
 
 exports.edit = async (req, res, next) => {
   let id = req.params.id;
+  console.log(id);
   var product = await productModel.product.findById({_id: id});
   var manufacturer = await manufacturerModel.manufacturer.find();
 
@@ -92,6 +94,8 @@ exports.edit = async (req, res, next) => {
     obj.quantity = req.body.quantity;
     obj.status = req.body.status;
     obj.manufacturer = req.body.manufacturer;
+    obj.description = req.body.description;
+    obj._id = id
     try {
       await productModel.product.findByIdAndUpdate({_id: id}, obj);
       res.redirect("/product/");
