@@ -5,7 +5,7 @@ const productSchema = new db.mongoose.Schema(
   {
     name: { type: String, required: true },
     price: { type: Number, required: true },
-    image: { type: String, required: false },
+    image: { type: Array, required: false },
     description: { type: String, required: false },
     detail: {
       //todo: screen information
@@ -30,7 +30,7 @@ const productSchema = new db.mongoose.Schema(
       audioTechnology: { type: String, required: false },
       specialFeatures: { type: String, required: false },
     },
-    color: { type: String, required: false },
+    color: { type: Array, required: false },
     status: { type: String, required: true },
     quantity: { type: Number, required: true },
     manufacturer: { type: db.mongoose.Schema.ObjectId, ref: "manufacturer" },
