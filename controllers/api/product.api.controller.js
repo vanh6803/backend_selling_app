@@ -1,8 +1,12 @@
 const productModel = require("../../models/product.model");
 
 exports.listProduct = async (req, res, next) => {
+  let search = null;
+  if (typeof req.query.manufacturer != "undefined") {
+    search = { manufacturer: req.query.manufacturer };
+  }
   try {
-    var products = await productModel.product.find().populate("manufacturer");
+    var products = await productModel.product.find(search).populate("manufacturer");
     if (products) {
       return res
         .status(200)

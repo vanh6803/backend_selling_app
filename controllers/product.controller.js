@@ -4,7 +4,11 @@ const fs = require("fs");
 const { log } = require("console");
 
 exports.list = async (req, res, next) => {
-  var product = await productModel.product.find();
+  let search = null;
+  if (typeof req.query.manufacturer != "undefined") {
+    search = { manufacturer: req.query.manufacturer };
+  }
+  var product = await productModel.product.find(search).populate('manufacturer');
   res.render("products/list", { product });
 };
 

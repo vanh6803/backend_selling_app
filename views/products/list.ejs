@@ -1,5 +1,9 @@
 <%- include('../inc/header') %>
 
+<form action="" method="get">
+    <input type="text" name="manufacturer">
+</form>
+
     <div class="container-fluid">
         <div class="row col-sm-12 col-md-8 m-auto mt-5 mb-5">
             <table class="table table-bordered border-dark-subtle table-striped bg-light">
@@ -20,7 +24,7 @@
                                 <%= index + 1 %>
                             </th>
                             <td class="text-center align-middle">
-                                <img src="<%= obj.image %>" alt="" width="50">
+                                <img src="<%= obj.image[0] %>" alt="" width="50">
                             </td>
                             <td class="text-center align-middle">
                                 <%= obj.name %>
