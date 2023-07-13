@@ -1,5 +1,140 @@
 <%- include('../inc/header') %>
 
-<h1>list account</h1>
+<div class="container-fluid mt-5">
+    <div class="row bg-secondary-subtle">
+        <h1>List user</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                <li class="breadcrumb-item"><a href="/account/">account</a></li>
+                <li class="breadcrumb-item active" aria-current="page">User</li>
+            </ol>
+        </nav>
+    </div>
+
+    <form method="get" action="">
+        <div class="row g-3 p-3">
+            <div class="col">
+                <input type="text" name="name" class="form-control" placeholder="User name" aria-label="First name">
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-secondary">search</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col" >fullname</th>
+                        <th scope="col" class="d-flex justify-content-between">username </th>
+                        <th scope="col">email</th>
+                        <th scope="col">role</th>
+                        <th colspan="2"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% account.forEach( (item, index)=> { %>
+                        <tr>
+                            <th scope="row">
+                                <%= index+1 %>
+                            </th>
+                            <td>
+                                <%= item.fullName %>
+                            </td>
+                            <td>
+                                <%= item.username %>
+                            </td>
+                            <td>
+                                <%= item.email %>
+                            </td>
+                            <td>
+                                <%= item.role %>
+                            </td>
+                            <td class="text-center d-flex justify-content-around">
+                                <a href="/account/edit/<%= item._id %>"
+                                    class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                                    <i class="bi bi-pen"></i>
+                                </a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                    data-bs-whatever="<%= item._id %>"
+                                    class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="d-flex justify-content-center">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">...</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- dialog confirm  -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Delete account?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Do you want delete this account?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="btnDelete" type="button" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- delete hidden form -->
+<form method="post" name="delete-form"></form>
+<script>
+    var recipient;
+    var deleteForm = document.forms['delete-form']
+    const exampleModal = document.getElementById('exampleModal')
+    if (exampleModal) {
+        exampleModal.addEventListener('show.bs.modal', event => {
+            // Button that triggered the modal
+            const button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            recipient = button.getAttribute('data-bs-whatever')
+            // If necessary, you could initiate an Ajax request here
+            // and then do the updating in a callback.
+            // Update the modal's content.
+            const modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+            modalBodyInput.value = recipient
+        })
+    }
+
+    var btnDelete = document.getElementById('btnDelete');
+    btnDelete.onclick = () => {
+        deleteForm.action = '/account/delete/' + recipient;
+        deleteForm.submit();
+    }
+</script>
 
 <%- include('../inc/footer') %>

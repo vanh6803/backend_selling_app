@@ -1,0 +1,203 @@
+[{
+  "_id": {
+    "$oid": "649829a2c4e06ccdff56cbcc"
+  },
+  "detail": {
+    "screenTechnology": "Dynamic AMOLED 2X",
+    "screenSize": "6.8",
+    "screenFeatures": "1440 x 3088 pixels (QHD+);\n120Hz;\nAlways-On display; \nHDR10+; \nGorilla Glass Victus 2; \n1750 nits;",
+    "screenType": "Droplets",
+    "rearCamera": "Super Big:  12MP F2.2 (Dual Pixel AF \n Main:  200MP F1.7 OIS ±3° (Super Quad Pixel AF) \n Tele 1: 10MP F4.9 (10X, Dual Pixel AF) OIS \n Tele 2: 10MP F2. 4 (3X, Dual Pixel AF) OIS zoom 100X \n Record video: 8K@24/30fps, 4K@30/60fps, 1080p@30/60/240fps, 720p@960fps, HDR10+,stereo recording, EIS . gyroscope",
+    "frontCamera": "Camera: 12MP F2.2 (Dual Pixel AF) \nRecord video: 4K@30/60fps, 1080p@30fps",
+    "chipSet": "Snapdragon 8 gen 2 (4nm)",
+    "cpu": "1x3,36 GHz Cortex-X3 & 2x2,8 GHz Cortex-A715 & 2x2,8 GHz Cortex-A710 & 3x2,0 GHz Cortex-A510",
+    "gpu": "Adreno 740",
+    "ram": 8,
+    "rom": 256,
+    "battery": 5000,
+    "operatingSystem": "Android",
+    "internet": "Wi-Fi: Wi-Fi 802.11 a/b/g/n/ac/6e,tri-band, Wi-Fi Direct \n5G \n Bluetooth: 5.3, A2DP, LE",
+    "weight": 234,
+    "audioTechnology": "Dual speakers; Audio AKG; Dolby Atmos sound",
+    "specialFeatures": "Wired charging: 45W wired\nWireless Charging: 15W (Qi/PMA)\nWireless battery sharing\nFingerprint Sensor: In-display fingerprint sensor\nTypes of sensors: Accelerometer sensor, Proximity sensor, Compass, Gyroscope, Barometer sensor\nSpecial Features: Support 5G, Wireless Charging, Fingerprint Security, Face Recognition, Water Resistant, Dust Resistant"
+  },
+  "name": "Samsung Galaxy S23 Ultra 256GB",
+  "price": 26990000,
+  "image": [
+    {
+      "url": "http://localhost:3000/images/products/samsungs23ultracream.png",
+      "nameColor": "Cream"
+    },
+    {
+      "url": "http://localhost:3000/images/products/samsungs23ultragreen.png",
+      "nameColor": "Green"
+    },
+    {
+      "url": "http://localhost:3000/images/products/samsungs23ultralavender.png",
+      "nameColor": "Lavender"
+    },
+    {
+      "url": "http://localhost:3000/images/products/samsungs23ultraphantomblack.png",
+      "nameColor": "Phantom Black"
+    }
+  ],
+  "color": [
+    {
+      "name": "Phantom Black",
+      "code": "#3a3540"
+    },
+    {
+      "name": "Green",
+      "code": "#9CAF88"
+    },
+    {
+      "name": "Cream",
+      "code": "#FEFBEA"
+    },
+    {
+      "name": "Lavender",
+      "code": "#B2A4D4"
+    }
+  ],
+  "quantity": 12,
+  "status": "New",
+  "manufacturer": {
+    "$oid": "646771cb32b9ecd7e15901d0"
+  },
+  "description": "After the successful landing of Samsung Galaxy S22, the next Flagship series phones - Phone Samsung Galaxy S23 Ultra is the object of great desire by Samfans. Elegant and luxurious design combined with breakthroughs in technology has created the flagship Samsung flagship product.\nIs the Samsung Galaxy S23 Ultra phone anything new?\nSamsung S23 Ultra is Samsung's high-end phone line, owning an impressive 200MP camera, powerful Snapdragon 8 Gen 2 chip, 8GB RAM memory for outstanding processing performance and luxurious square frame. The product was launched from the beginning of 2023.\nHigh-end design, trendy lines, delicate\nFollowing the design from the Samsung Galaxy S22 Ultra, the Samsung S23 Ultra has a slim appearance with well-cut and extremely delicate lines. With an edge-to-edge screen, a screen-to-body ratio of more than 90%, the S23 Ultra phones promise to bring a trendy design that attracts all eyes.\nStill a monolithic back with a borderless camera cluster placed in the top left corner of the familiar Samsung logo located in the lower corner of the back, creating a simple but equally outstanding design for the design. Elegant yet distinctively attractive, simple yet exuding luxury, the Samsung S23 Ultra is definitely the perfect choice when it comes to voting for the top designs in 2023.\nThe look of the Samsung Galaxy S23 Ultra is endlessly attractive with a variety of colors that are equally elegant, this series of phones immediately creates a new definition of technological beauty for users as soon as they arrive. eye contact.\nBesides, Samsung also uses environmentally friendly recycled materials on the S23 Ultra. Accordingly, the glass coating to the paint color are all unique highlights on this flagship model."
+},
+{
+  "_id": {
+    "$oid": "649829a2c4e06ccdff56cbcd"
+  },
+  "detail": {
+    "screenTechnology": "AMOLED",
+    "screenSize": "6.67",
+    "screenFeatures": "120Hz refresh rate, Corning Gorilla Glass 5, HDR10+, Brightness: 500 nits, Dolby Vision®, 360° Ambient Light Sensor",
+    "screenType": "Perforated (Mole)",
+    "rearCamera": "Camera: 200MP + 8MP + 2MP\n Record video: 4K 2160p@60fps, FullHD, 1080p@30fps, HD 720p@30fps, FullHD 1080p@60fps, 8K 4320p@24fps, 4K 2160p@30fps",
+    "frontCamera": "Camera: 20MP \nRecord video: 1080p 1920x1080 at 60fps, 1080p 1920x1080 at 30fps, 720p 1280x720 at 30fps, Slow motion video: 120fps, 720p",
+    "chipSet": "Snapdragon 8+ Gen 1",
+    "cpu": "1x3.19 GHz Cortex-X2 & 3x2.75 GHz Cortex-A710 & 4x1.80 GHz Cortex-A510",
+    "gpu": "Adreno 670",
+    "ram": 12,
+    "rom": 256,
+    "battery": 5000,
+    "operatingSystem": "Android",
+    "internet": "Wi-Fi: Wi-Fi 802.11 a/b/g/n/ac/6e, dual-band, Wi-Fi Direct, hotspot \n5G \n Bluetooth: 5.3, A2DP, LE",
+    "weight": 205,
+    "audioTechnology": "Dual speakers; Dolby Atmos®; SOUND BY Harman Kardon",
+    "specialFeatures": "120W fast charging, super battery saving\nFingerprint Sensor: In-display fingerprint sensor\nLiquid cooling system (Super large steam chamber + Laminated graphite sheet + Boron Nitride membrane)\nMulti Window (Split Screen)\nGame Optimization (Game Turbo)\nHeart rate monitoring with fingerprint sensor\nThe screen always shows AOD\nExpand RAM memory\nGoogle Assistant virtual assistant\nThe screen always shows AOD"
+  },
+  "name": "Xiaomi 12T Pro",
+  "price": 14690000,
+  "image": [
+    {
+      "url": "http://localhost:3000/images/products/xiaomi12tproblack.png",
+      "nameColor": "Black"
+    },
+    {
+      "url": "http://localhost:3000/images/products/xiaomi12tproslirve.png",
+      "nameColor": "Silver"
+    },
+    {
+      "url": "http://localhost:3000/images/products/xiaomi12tproblue.png",
+      "nameColor": "Blue"
+    }
+  ],
+  "color": [
+    {
+      "name": "Black",
+      "code": "#181818"
+    },
+    {
+      "name": "Silver",
+      "code": "#bbbfc7"
+    },
+    {
+      "name": "Blue",
+      "code": "#1675a0"
+    }
+  ],
+  "quantity": 12,
+  "status": "New",
+  "manufacturer": {
+    "$oid": "649826483f1ba429467576bb"
+  },
+  "description": "Inheriting and developing modern technology from the previous generation of smartphones, Xiaomi 12T Pro promises to bring users an interesting experience. Design highlights, performance, battery life, photo and video capabilities are evident in the following helpful information! Let's find out and go deeper with CellphoneS to find out why Xiaomi 12T Pro is so appreciated!\nIn addition, if you are interested in the latest version of Xiaomi Mi 12T in the fourth quarter of 2022, there are many attractive offers at CellphoneS.\nXiaomi Mi 12T Pro owns a powerful Snapdragon 8 Gen 1+ processor, 12GB RAM + 256GB internal memory for comfortable storage space. In addition, the 200MP sensor camera cluster and 20MP selfie camera for detailed and sharp photos and videos. Not only that, the AMOLED DotDisplay screen with FHD + resolution with 120Hz refresh rate delivers vibrant, vivid images.\nXiaomi 12T Pro super configuration, stable, fashionable\nXiaomi 12T Pro is a smartphone in the high-end segment that Xiaomi wants to launch this year. In addition to the stylish design, Xiaomi 12T Pro also gives users a super experience thanks to the most powerful chip today. Below are details about Xiaomi's smartphone model.\n"
+},
+{
+  "_id": {
+    "$oid": "64982d5ec4e06ccdff56cbce"
+  },
+  "detail": {
+    "screenTechnology": "Super Retina XDR OLED",
+    "screenSize": "6.7",
+    "screenFeatures": "Độ phân giải: 2796 x 1290-pixel;\n120Hz;\nAlways-On display; \nHDR; \nTrue Tone; \nHaptic Touch; \n2 000 000:1; \n2000 nits;\n120Hz",
+    "screenType": " Dynamic Island",
+    "rearCamera": " Camera selfie: 12 MP, f/1.9, 23mm, 1/3.6\", PDAF; \nQuay video: 4K@24/25/30/60fps, 1080p@25/30/60/120fps, Chống rung điện tử",
+    "frontCamera": "Camera chính: 48 MP, f/1.8, 24mm, 1.22µm, PDAF, OIS \nCamera góc siêu rộng: 12 MP, f/2.2, 13mm, 120˚, 1.4µm, PDAF \nCamera tele: 12 MP, f/2.8, 77mm (telephoto), PDAF, OIS, 3x optical zoom \nCảm biến độ sâu TOF 3D LiDAR\nQuay video: \n-4K@24/25/30/60fps\n-1080p@25/30/60/120/240fps \n-10-bit HDR, Dolby Vision HDR (60fps) \n-Chế độ ProRes \n-Chế độ Cinematic (4K@30fps)",
+    "chipSet": "Apple A16 Bionic 6-core",
+    "cpu": " 3.46 GHz",
+    "gpu": "Apple GPU (5-core graphics)",
+    "ram": 6,
+    "rom": 128,
+    "battery": 4323,
+    "operatingSystem": "Choose operating system",
+    "internet": "Wi-Fi MIMO\nDual-band (2.4 GHz/5 GHz)\nWi-Fi 802.11 a/b/g/n/ac/ax \nWi-Fi hotspot \n5G",
+    "weight": 240,
+    "audioTechnology": " Loa kép",
+    "specialFeatures": "Cảm biến gia tốc \nCảm biến tiệm cận \nCảm biến ánh sáng \nCon quay hồi chuyển\nCảm biến áp kế\nHỗ trợ 5G\nSạc không dây\nNhận diện khuôn mặt \nKháng nước, kháng bụi, ip68"
+  },
+  "name": "iPhone 14 Pro Max 128GB",
+  "price": 26650000,
+  "image": [
+    {
+      "url": "http://localhost:3000/images/products/iphone14promaxdeeppuple.png",
+      "nameColor": "Deep Purple"
+    },
+    {
+      "url": "http://localhost:3000/images/products/iphone14promaxblack.png",
+      "nameColor": "Space Black"
+    },
+    {
+      "url": "http://localhost:3000/images/products/iphone14promaxgold.png",
+      "nameColor": "Gold"
+    },
+    {
+      "url": "http://localhost:3000/images/products/iphone14promaxwhite.png",
+      "nameColor": "Silver"
+    }
+  ],
+  "color": [
+    {
+      "name": "Space Black",
+      "code": "#111111"
+    },
+    {
+      "name": "Silver",
+      "code": "#C0C0C0"
+    },
+    {
+      "name": "Gold",
+      "code": "#FFD700"
+    },
+    {
+      "name": "Deep Purple",
+      "code": "#570861"
+    }
+  ],
+  "quantity": 12,
+  "status": "Choose status",
+  "manufacturer": {
+    "$oid": "64665ec84662a602fbe0f4f7"
+  },
+  "createdAt": {
+    "$date": "2023-06-02T09:42:43.453Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-22T14:44:34.681Z"
+  },
+  "__v": 0,
+  "description": "iPhone 14 Pro Max sở hữu thiết kế màn hình Dynamic Island ấn tượng cùng màn hình OLED 6,7 inch hỗ trợ always-on display và hiệu năng vượt trội với chip A16 Bionic. Bên cạnh đó máy còn sở hữu nhiều nâng cấp về camera với cụm camera sau 48MP, camera trước 12MP dùng bộ nhớ RAM 6G đa nhiệm vượt trội.\nTrước tiên, khi chọn mua iPhone 14 Pro Max chính hãng tại Hệ thống CellphoneS bạn sẽ được sở hữu điện thoại với mức giá niêm yết vô cùng ưu đãi. Ngoài ra, CellphoneS hiện nay còn có thêm các chương trình khuyến mãi hấp dẫn khi khách hàng chọn thanh toán qua những thẻ ngân hàng và ví điện tử sau:\n-   Khi mở thẻ ngân hàng VPBank, bạn sẽ được ưu đãi đến 800 nghìn đồng;\n-   Nếu thanh toán qua thẻ Kredivo, bạn còn được giảm thêm 5% trên giá trị sản phẩm (tối đa 500 nghìn đồng);\n-   Bạn sẽ nhận được voucher giảm giá 200 nghìn đồng khi mở thẻ tín dụng ViB tại CellphoneS;\n-   Ngoài ra, khách hàng còn được giảm thêm 100 nghìn đồng khi chọn thanh toán qua ví điện tử ShopeePay."
+}]

@@ -1,0 +1,14 @@
+[
+    {
+        "fullName": "Nguyễn Văn A",
+        "username": "helios",
+        "email":"helios@gmail.com",
+        "password": "123456",
+        "address": "",
+        "role": "user",
+        "token":"",
+        "gender": 0,
+        "phone": "0312456789",
+        "avatar":"http://localhost:3000/images/user/i8.png" 
+    }
+]

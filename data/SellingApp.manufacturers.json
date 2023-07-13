@@ -1,0 +1,96 @@
+[{
+  "_id": {
+    "$oid": "64665ec84662a602fbe0f4f7"
+  },
+  "name": "Apple",
+  "logo": "http://localhost:3000/images/logoApple.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "646771cb32b9ecd7e15901d0"
+  },
+  "name": "Samsung",
+  "logo": "http://localhost:3000/images/samsung.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "646771d432b9ecd7e15901d2"
+  },
+  "name": "Oppo",
+  "logo": "http://localhost:3000/images/oppo.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "646771dd32b9ecd7e15901d4"
+  },
+  "name": "Asus",
+  "logo": "http://localhost:3000/images/asus.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "646771ef32b9ecd7e15901d6"
+  },
+  "name": "Google pixel",
+  "logo": "http://localhost:3000/images/googlepixel.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "646771fc32b9ecd7e15901d8"
+  },
+  "name": "Huawei",
+  "logo": "http://localhost:3000/images/huawei.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6467721932b9ecd7e15901dc"
+  },
+  "name": "Nokia",
+  "logo": "http://localhost:3000/images/nokia.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6467722132b9ecd7e15901de"
+  },
+  "name": "Oneplus",
+  "logo": "http://localhost:3000/images/oneplus.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6467724132b9ecd7e15901e1"
+  },
+  "name": "Realme",
+  "logo": "http://localhost:3000/images/realme.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6467724d32b9ecd7e15901e3"
+  },
+  "name": "Techno",
+  "logo": "http://localhost:3000/images/techno.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6467725f32b9ecd7e15901e6"
+  },
+  "name": "Redmagic",
+  "logo": "http://localhost:3000/images/redmagic.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "649826483f1ba429467576bb"
+  },
+  "name": "Xiaomi",
+  "logo": "http://localhost:3000/images/xiaomi.png",
+  "__v": 0
+}]

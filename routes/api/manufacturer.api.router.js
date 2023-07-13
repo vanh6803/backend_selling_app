@@ -4,4 +4,7 @@ var manufacturerController = require('../../controllers/api/manufacturer.api.con
 
 router.get("/", manufacturerController.listManufacturer);
 
+router.get("/add", manufacturerController.listManufacturer);
+router.post("/add", manufacturerController.listManufacturer);
+
 module.exports = router;

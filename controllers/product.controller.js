@@ -1,7 +1,6 @@
 const productModel = require("../models/product.model");
 const manufacturerModel = require("../models/manufacturer.model");
 const fs = require("fs");
-const { log } = require("console");
 
 exports.list = async (req, res, next) => {
   let search = null;
