@@ -5,8 +5,8 @@ const bcrypt = require("bcrypt");
 
 const accountSchema = new db.mongoose.Schema(
   {
-    fullName: { type: String, required: true },
-    username: { type: String, required: true },
+    fullName: { type: String, required: false },
+    username: { type: String, required: false },
     email: { type: String, required: true },
     password: { type: String, required: true },
     address: { type: String, required: false },
@@ -35,8 +35,8 @@ accountSchema.methods.generateAuthToken = async function(){
 
 //find user by id
 //use for login
-accountSchema.static.findByCredentials = async (username, password) => {
-  const user = await account.findOne({username: username})
+accountSchema.statics.findByCredentials = async (email, password) => {
+  const user = await account.findOne({email: email})
   if(!user){
     throw new Error({error: "can not user"})
   }
@@ -49,5 +49,5 @@ accountSchema.static.findByCredentials = async (username, password) => {
 
 let account = db.mongoose.model("account", accountSchema);
 module.exports = {
-  account,
+  account
 };

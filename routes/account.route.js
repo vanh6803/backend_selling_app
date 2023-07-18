@@ -5,15 +5,15 @@ var multer = require('multer');
 var uploader = multer({ dest: './tmp' });
 
 /* GET home page. */
-router.get("/", accountController.list);
+// router.get("/", accountController.list);
 
-router.get("/add", accountController.add);
-router.post("/add",uploader.single('avatar'), accountController.add);
+// router.get("/add", accountController.add);
+// router.post("/add",uploader.single('avatar'), accountController.add);
 
-router.get("/edit/:id", accountController.edit);
-router.post("/edit/:id",uploader.single('avatar'), accountController.edit);
+// router.get("/edit/:id", accountController.edit);
+// router.post("/edit/:id",uploader.single('avatar'), accountController.edit);
 
-router.get("/delete/:id", accountController.delete);
-router.post("/delete/:id", accountController.delete);
+// router.get("/delete/:id", accountController.delete);
+// router.post("/delete/:id", accountController.delete);
 
 module.exports = router;
