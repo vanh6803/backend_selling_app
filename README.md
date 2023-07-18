@@ -22,7 +22,7 @@ The backend selling app is built using the following technologies:
 
 To set up the backend selling app on your local machine, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/backend-selling-app.git`
+1. Clone the repository: `git clone https://github.com/vanh6803/backend_selling_app`
 2. Navigate to the project directory: `cd backend-selling-app`
 3. Install the dependencies: `npm install`
 
