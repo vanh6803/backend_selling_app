@@ -36,4 +36,14 @@ exports.reg = async (req, res, next) => {
   }
 };
 
-exports.logout = async (req, res, next) => {}
+exports.logout = async (req, res, next) => {
+  try {
+    console.log(req.user);
+    req.user.token = null;
+    await req.user.save()
+    return res.status(200).json({ status: 200, msg: 'logout successful' });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ status: 500, msg: error.message });
+  }
+}

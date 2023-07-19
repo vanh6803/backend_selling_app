@@ -13,7 +13,7 @@ const accountSchema = new db.mongoose.Schema(
     role: { type: Number, required: true },
     token: { type: String, required: false },
     // accountBalance: { type: Number, required: false }, // sô dư tài khoản
-    gender: { type: Number, required: false },
+    gender: { type: String, required: false },
     phone: { type: String, required: false },
     avatar: { type: String, required: false },
     birthday: { type: String, required: false },

@@ -4,6 +4,6 @@ var siteController = require('../../controllers/api/site.api.controller')
 
 router.post("/login", siteController.login);
 router.post("/register", siteController.reg);
-router.post("/logout", siteController.logout);
+router.get("/logout", siteController.logout);
 
 module.exports = router;
