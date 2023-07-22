@@ -12,7 +12,7 @@ exports.listProduct = async (req, res, next) => {
         .status(200)
         .json({ data: products, message: "get data successfully" });
     } else {
-      return res.status(200).json({ message: "not found" });
+      return res.status(400).json({ message: "not found" });
     }
   } catch (error) {
     return res.status(500).json({ msg: error.message });

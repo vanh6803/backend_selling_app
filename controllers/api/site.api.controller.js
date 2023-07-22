@@ -12,7 +12,7 @@ exports.login = async (req, res, next) => {
     }
     // đăng nhập thành công, tạo token làm việc mới
     await user.generateAuthToken();
-
+    console.log(user);
     return res.status(200).json({ data: user, message: "login successfully" });
   } catch (error) {
     console.log(error);
