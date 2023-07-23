@@ -2,6 +2,7 @@
   "name": "backend-selling-app",
   "version": "0.0.0",
   "private": true,
+  "author": "V.anh6803",
   "scripts": {
     "start": "nodemon --inspect ./bin/www"
   },

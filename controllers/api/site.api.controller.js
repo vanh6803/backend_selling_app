@@ -50,17 +50,14 @@ exports.logout = async (req, res, next) => {
 
 exports.detailProfile = async (req, res, next) => {
   try {
-    // Truy vấn thông tin người dùng từ cơ sở dữ liệu bằng id của người dùng đã được lưu trong req.user.
     const user = await accountModel.account.findById(req.user._id);
 
     if (!user) {
-      return res.status(404).json({ message: "User not found" });
+      return res.status(404).json({status:404, message: "User not found" });
     }
-
-    // Trả về thông tin người dùng cho client.
-    return res.status(200).json({ data: user });
+    return res.status(200).json({status:200, data: user, message: "get profile successfully"});
   } catch (error) {
     console.log(error);
-    return res.status(500).json({ message: error.message });
+    return res.status(500).json({status:500, message: error.message });
   }
 };
