@@ -38,11 +38,15 @@ accountSchema.methods.generateAuthToken = async function(){
 accountSchema.statics.findByCredentials = async (email, password) => {
   const user = await account.findOne({email: email})
   if(!user){
-    throw new Error({error: "can not user"})
+    return res
+        .status(404)
+        .json({message: "can not user" });
   }
   const isPasswordMatch = await bcrypt.compare(password, user.password)
   if(!isPasswordMatch){
-    throw new Error({ error: "incorrect password" });
+    return res
+        .status(404)
+        .json({message: "incorrect password" });
   }
   return user
 }
