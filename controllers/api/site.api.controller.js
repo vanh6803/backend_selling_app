@@ -3,19 +3,25 @@ const bcrypt = require("bcrypt");
 
 exports.login = async (req, res, next) => {
   try {
-    const user = await accountModel.account.findByCredentials(
+    const result = await accountModel.account.findByCredentials(
       req.body.email,
       req.body.password
     );
-    if (!user) {
-      return res.status(401).json({ message: "Wrong credentials" });
+
+    if (result.error) {
+      console.log("aaa");
+      console.log(result.message);
+      return res.status(200).json({status: 200, message: result.message });
     }
-    // đăng nhập thành công, tạo token làm việc mới
+    console.log("bbb");
+    // Đăng nhập thành công.
+    // Tạo và trả về mã thông báo (token).
+    const user = result; // Đã trả về đối tượng user khi không có lỗi
     await user.generateAuthToken();
     console.log(user);
     return res.status(200).json({ data: user, message: "login successfully" });
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
     return res.status(500).json({ message: error.message });
   }
 };

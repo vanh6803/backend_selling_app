@@ -27,7 +27,7 @@ const accountSchema = new db.mongoose.Schema(
 accountSchema.methods.generateAuthToken = async function(){
   const user = this
   console.log(user);
-  const token = jwt.sign({_id: user._id, username: user.username}, chuoi_ky_tu_bi_mat)
+  const token = jwt.sign({_id: user._id, email: user.email}, chuoi_ky_tu_bi_mat)
   user.token = token
   await user.save()
   return token
@@ -36,20 +36,20 @@ accountSchema.methods.generateAuthToken = async function(){
 //find user by id
 //use for login
 accountSchema.statics.findByCredentials = async (email, password) => {
-  const user = await account.findOne({email: email})
-  if(!user){
-    return res
-        .status(404)
-        .json({message: "can not user" });
+  const user = await account.findOne({ email: email });
+
+  if (!user) {
+    return { error: true, message: "Email not found" };
   }
-  const isPasswordMatch = await bcrypt.compare(password, user.password)
-  if(!isPasswordMatch){
-    return res
-        .status(404)
-        .json({message: "incorrect password" });
+
+  const isPasswordMatch = await bcrypt.compare(password, user.password);
+
+  if (!isPasswordMatch) {
+    return { error: true, message: "Incorrect password" };
   }
-  return user
-}
+
+  return user;
+};
 
 let account = db.mongoose.model("account", accountSchema);
 module.exports = {
