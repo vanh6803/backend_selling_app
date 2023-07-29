@@ -11,7 +11,7 @@ exports.login = async (req, res, next) => {
     if (result.error) {
       console.log("aaa");
       console.log(result.message);
-      return res.status(200).json({status: 200, message: result.message });
+      return res.status(401).json({status: 401, message: result.message });
     }
     console.log("bbb");
     // Đăng nhập thành công.
@@ -19,7 +19,7 @@ exports.login = async (req, res, next) => {
     const user = result; // Đã trả về đối tượng user khi không có lỗi
     await user.generateAuthToken();
     console.log(user);
-    return res.status(200).json({ data: user, message: "login successfully" });
+    return res.status(200).json({status: 200, data: user, message: "login successfully" });
   } catch (error) {
     console.log(error.message);
     return res.status(500).json({ message: error.message });
@@ -47,10 +47,10 @@ exports.logout = async (req, res, next) => {
     console.log(req.user);
     req.user.token = null;
     await req.user.save()
-    return res.status(200).json({ status: 200, msg: 'logout successful' });
+    return res.status(200).json({ status: 200, message: 'logout successful' });
   } catch (error) {
     console.log(error);
-    res.status(500).json({ status: 500, msg: error.message });
+    res.status(500).json({ status: 500, message: error.message });
   }
 }
 
