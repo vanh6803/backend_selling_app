@@ -27,12 +27,7 @@ const api_auth = async (req, res, next) => {
     }
 }
 
-const check_register =  async (req, res, next) => {
-    var email = account.account.findOne({email: req.body.email})
-    
-}
 
 module.exports = {
     api_auth,
-    check_register
 };

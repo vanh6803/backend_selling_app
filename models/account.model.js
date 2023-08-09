@@ -10,10 +10,10 @@ const accountSchema = new db.mongoose.Schema(
     email: { type: String, required: true },
     password: { type: String, required: true },
     address: { type: String, required: false },
-    role: { type: Number, required: true },
+    role: { type: Number, required: true }, //1: user, 0: admin
     token: { type: String, required: false },
     // accountBalance: { type: Number, required: false }, // sô dư tài khoản
-    gender: { type: String, required: false },
+    gender: { type: Number, required: false },//0: male, 1: female
     phone: { type: String, required: false },
     avatar: { type: String, required: false },
     birthday: { type: String, required: false },
