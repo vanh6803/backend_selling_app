@@ -58,20 +58,6 @@ exports.updateData = async (req, res, next) => {
   }
 };
 
-exports.UploadAvatar = async (req, res, next) => {
-  try {
-    if (!req.file) {
-      return res.status(400).json({ status: 400, message: "No file uploaded" });
-    }
-    const imageUrl = req.file.filename;
-    return res
-      .status(200)
-      .json({ status: 200, message: "Image uploaded", imageUrl });
-  } catch (error) {
-    return res.status(500).json({ status: 500, message: error });
-  }
-};
-
 exports.editAvatar = async (req, res, next) => {
   if (!req.file) {
     return res.status(400).json({ status: 400, message: "No file uploaded" });

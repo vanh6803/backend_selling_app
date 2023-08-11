@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({storage: storage})
+const upload = multer({ storage: storage });
 
 var accountController = require("../../controllers/api/account.api.controller");
 const authMiddleware = require("../../middleware/auth.middleware");
@@ -25,7 +25,11 @@ router.put(
   accountController.updateData
 );
 
-router.post('upload-avatar', authMiddleware.api_auth,upload.single('avatarImage'), accountController.UploadAvatar)
-router.put('edit-avatar', authMiddleware.api_auth,upload.single('avatarImage'), accountController.editAvatar)
+router.put(
+  "edit-avatar",
+  authMiddleware.api_auth,
+  upload.single("avatarImage"),
+  accountController.editAvatar
+);
 
 module.exports = router;
