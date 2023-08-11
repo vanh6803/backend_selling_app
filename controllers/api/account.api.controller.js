@@ -22,13 +22,11 @@ exports.searchUser = async (req, res, next) => {
         .json({ check: true, message: "Email already exists" });
     }
   } catch (error) {
-    return res
-      .status(500)
-      .json({ message: "Internal server error", error: error });
+    return res.status(500).json({ status: 500, message: error });
   }
 };
 
-exports.update = async (req, res, next) => {
+exports.updateData = async (req, res, next) => {
   const id = req.params.id;
   const updateData = req.body;
   console.log(id);
@@ -36,7 +34,7 @@ exports.update = async (req, res, next) => {
   try {
     // Check if the user exists
     const existingUser = await accountModel.account.findById(id);
-    
+
     if (!existingUser) {
       console.log("User not found");
       return res.status(404).json({ status: 404, message: "User not found" });
@@ -45,16 +43,56 @@ exports.update = async (req, res, next) => {
     // Update the user data
     const updatedUser = await accountModel.account.findByIdAndUpdate(
       id,
-      updateData,
+      updateData
     );
+
+    return res.status(200).json({
+      status: 200,
+      message: "User updated successfully",
+      data: updatedUser,
+    });
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ status: 500, message: "Internal server error", error: error });
+  }
+};
+
+exports.UploadAvatar = async (req, res, next) => {
+  try {
+    if (!req.file) {
+      return res.status(400).json({ status: 400, message: "No file uploaded" });
+    }
+    const imageUrl = req.file.filename;
+    return res
+      .status(200)
+      .json({ status: 200, message: "Image uploaded", imageUrl });
+  } catch (error) {
+    return res.status(500).json({ status: 500, message: error });
+  }
+};
+
+exports.editAvatar = async (req, res, next) => {
+  if (!req.file) {
+    return res.status(400).json({ status: 400, message: "No file uploaded" });
+  }
+
+  const imageUrl = req.file.filename;
+
+  try {
+    const updatedUser = await Account.findByIdAndUpdate(
+      req.params.id,
+      { avatar: imageUrl },
+      { new: true } // Return the updated user
+    );
+
+    if (!updatedUser) {
+      return res.status(404).json({ status: 404, message: "User not found" });
+    }
 
     return res
       .status(200)
-      .json({
-        status: 200,
-        message: "User updated successfully",
-        data: updatedUser,
-      });
+      .json({ status: 200, message: "Image updated", data: imageUrl });
   } catch (error) {
     return res
       .status(500)
