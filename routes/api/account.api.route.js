@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 const multer = require("multer");
 const path = require("path");
+
 // Set up multer storage and upload configuration
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -13,7 +14,11 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({ storage: storage });
+// const upload = multer({ dest: './public/images/user' });
+const upload = multer({ storage: storage,
+limits: {
+  fileSize: 10000000
+} });
 
 var accountController = require("../../controllers/api/account.api.controller");
 const authMiddleware = require("../../middleware/auth.middleware");
@@ -26,9 +31,8 @@ router.put(
 );
 
 router.put(
-  "edit-avatar",
-  authMiddleware.api_auth,
-  upload.single("avatarImage"),
+  "/edit-avatar/:id",
+  upload.single("avatar"),
   accountController.editAvatar
 );
 

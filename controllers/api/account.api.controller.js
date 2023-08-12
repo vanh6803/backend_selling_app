@@ -59,18 +59,20 @@ exports.updateData = async (req, res, next) => {
 };
 
 exports.editAvatar = async (req, res, next) => {
+  const id = req.params.id;
+  console.log("id" + id);
+  console.log("file: " + req.file);
   if (!req.file) {
     return res.status(400).json({ status: 400, message: "No file uploaded" });
   }
 
-  const imageUrl = req.file.filename;
+  const imageUrl = "http://localhost:3000/images/user/"+req.file.filename;
+  console.log("imageUrl: " + imageUrl);
 
   try {
-    const updatedUser = await Account.findByIdAndUpdate(
-      req.params.id,
-      { avatar: imageUrl },
-      { new: true } // Return the updated user
-    );
+    const updatedUser = await accountModel.account.findByIdAndUpdate(id, {
+      avatar: imageUrl,
+    });
 
     if (!updatedUser) {
       return res.status(404).json({ status: 404, message: "User not found" });
@@ -80,6 +82,7 @@ exports.editAvatar = async (req, res, next) => {
       .status(200)
       .json({ status: 200, message: "Image updated", data: imageUrl });
   } catch (error) {
+    console.log(error);
     return res
       .status(500)
       .json({ status: 500, message: "Internal server error", error: error });
