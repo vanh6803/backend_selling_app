@@ -33,6 +33,7 @@ router.put(
 router.put(
   "/edit-avatar/:id",
   upload.single("avatar"),
+  authMiddleware.api_auth,
   accountController.editAvatar
 );
 

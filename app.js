@@ -12,6 +12,7 @@ var productApiRouter = require("./routes/api/product.api.route");
 var manufacturerApiRouter = require("./routes/api/manufacturer.api.router");
 var accountApiRouter = require("./routes/api/account.api.route");
 var siteApiRouter = require("./routes/api/site.api.route");
+var BillApiRouter = require("./routes/api/bill.api.route");
 
 var app = express();
 
@@ -32,6 +33,7 @@ app.use("/product", productRouter);
 app.use("/api/product", productApiRouter);
 app.use("/api/manufacturer", manufacturerApiRouter);
 app.use("/api/account", accountApiRouter);
+app.use("/api/bill", BillApiRouter);
 app.use("/api", siteApiRouter);
 
 // catch 404 and forward to error handler
